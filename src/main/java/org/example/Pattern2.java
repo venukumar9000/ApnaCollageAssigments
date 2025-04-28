@@ -382,7 +382,7 @@ public class Pattern2 {
          int []zs= {2,4,6,8,10};
          pairsArray(zs);
 
-         int [] ks={1,2}
+         int [] ks={1,2};
     }
 
 }
