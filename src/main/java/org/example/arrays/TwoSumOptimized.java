@@ -47,7 +47,7 @@ public class TwoSumOptimized {
             if(nums[i]>max){
                 secMax=max;
                 max=nums[i];
-            }else if(max>secMax && secMax<nums[i]){
+            }else if(nums[i]>secMax && max !=nums[i]){
                 secMax=nums[i];
             }
         }
@@ -328,6 +328,11 @@ public class TwoSumOptimized {
         majority(az);
         int [] palinddorm={1,2,3,2,1};
         palindromeArray(palinddorm);
+
+
+
+
+
 
 
     }

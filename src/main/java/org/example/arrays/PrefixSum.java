@@ -37,7 +37,12 @@ public class PrefixSum {
         System.out.println(Arrays.toString(num));
 
 
+        for(int i=1;i<num.length;i++){
+            num[i]=num[i]+num[i-1];
+        }
+
     }
+
 
 
 }

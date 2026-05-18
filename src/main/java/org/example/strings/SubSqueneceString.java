@@ -21,11 +21,11 @@ public class SubSqueneceString {
         isPalindrome(s);
 
         String[] sss = {"flower", "flow", "floght"};
-        System.out.println(longestCommonPrefix(sss));
+        System.out.println("longest preFIX "+longestCommonPrefix(sss));
         System.out.println( calculateAge("29-12-1996"));
          long l = daysBetween(LocalDate.of(2026, 01, 01), LocalDate.of(2026, 01, 19));
         System.out.println(l);
-        System.out.println(getWeekends(LocalDate.parse("2025-01-01"),LocalDate.parse("2026-01-01")));
+        System.out.println("weekends "+getWeekends(LocalDate.parse("2025-01-01"),LocalDate.parse("2026-01-01")));
 
 
         List<Integer> li = Arrays.asList(1,2,3,4,5,8);
@@ -122,15 +122,16 @@ public class SubSqueneceString {
 
         Arrays.sort(str);
         StringBuilder sb = new StringBuilder();
-       for(int i=0;i<str[0].length();i++){
+        int minLength = Math.min(str[0].length(),str[str.length-1].length());
+       for(int i=0;i<minLength;i++){
            if (str[0].charAt(i) == str[str.length-1].charAt(i)) {
-               sb.append("");
+               sb.append(str[0].charAt(i));
            }else{
                break;
            }
        }
 
-       return "";
+       return sb.toString();
     }
     public static int calculateAge(String dob) {
         DateTimeFormatter dateTimeFormatter =  DateTimeFormatter.ofPattern("dd-MM-yyyy");
